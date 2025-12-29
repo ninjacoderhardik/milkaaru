@@ -1,14 +1,47 @@
+"use client";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+
 import { Avatar, AvatarImage } from "../../../../components/ui/avatar";
 
-const starRatings = [
+const starRatings = Array(5).fill(
   "https://c.animaapp.com/mj71wa7zCf2vzX/img/star-3.svg",
-  "https://c.animaapp.com/mj71wa7zCf2vzX/img/star-3.svg",
-  "https://c.animaapp.com/mj71wa7zCf2vzX/img/star-3.svg",
-  "https://c.animaapp.com/mj71wa7zCf2vzX/img/star-3.svg",
-  "https://c.animaapp.com/mj71wa7zCf2vzX/img/star-3.svg",
+);
+
+const reviews = [
+  {
+    quote:
+      "We’ve been getting Milkaaru milk delivered to our home for months now. The freshness is unmatched — it tastes far better than the packet milk we used before. It feels pure, natural, and just like the milk we enjoyed at our village farms. Truly reliable quality every single day.",
+    name: "Riya Mehta",
+    title: "Homemaker & Mother of Two",
+    avatar: "https://c.animaapp.com/mj71wa7zCf2vzX/img/rectangle-17.png",
+  },
+  {
+    quote:
+      "As a nutritionist, I’m picky about sourcing. Milkaaru’s milk has a clean flavor and consistent quality my clients appreciate. The transparency from farm to home makes it an easy recommendation.",
+    name: "Dr. Ananya Rao",
+    title: "Nutritionist",
+    avatar: "https://c.animaapp.com/mj71wa7zCf2vzX/img/ellipse-2.png",
+  },
+  {
+    quote:
+      "My café relies on great milk for coffee and desserts. Milkaaru delivers rich taste and dependable supply, which keeps our customers coming back.",
+    name: "Karan Bhatt",
+    title: "Cafe Owner",
+    avatar: "https://c.animaapp.com/mj71wa7zCf2vzX/img/ellipse-3.png",
+  },
+  {
+    quote:
+      "Switching to Milkaaru reduced the additives we were worried about. The kids love the taste, and deliveries are always on time.",
+    name: "Shweta Singh",
+    title: "Parent of 3",
+    avatar: "https://c.animaapp.com/mj71wa7zCf2vzX/img/ellipse-4.png",
+  },
 ];
 
-export default function TestimonialsSection  () {
+export default function TestimonialsSection() {
   return (
     <section className="flex w-full flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 px-5 sm:px-8 md:px-12 lg:px-[100px] py-12 bg-[#043e48]">
       <div className="w-full max-w-[520px] sm:max-w-[560px] lg:max-w-[520px] -translate-y-4 animate-fade-in opacity-0 [--animation-delay:200ms] group cursor-pointer overflow-hidden rounded-[24px] shadow-2xl shadow-black/30">
@@ -44,57 +77,61 @@ export default function TestimonialsSection  () {
           </h2>
         </div>
 
-        <div className="flex flex-col items-start gap-6 self-stretch w-full -translate-y-4 animate-fade-in opacity-0 [--animation-delay:600ms]">
-          <div className="flex items-center gap-1">
-            {starRatings.map((star, index) => (
-              <img
-                key={`star-${index}`}
-                className="w-4 h-4 sm:w-[18.67px] sm:h-[17.86px] transition-all duration-300 hover:scale-125 hover:rotate-12 cursor-pointer"
-                alt="Star"
-                src={star}
-              />
-            ))}
-          </div>
-
-          <div className="flex flex-col items-start gap-8 sm:gap-10 self-stretch w-full">
-            <p className="self-stretch -mt-px font-['Nunito',Helvetica] font-medium text-white text-base sm:text-lg md:text-xl tracking-[0.32px] leading-7">
-              We&apos;ve been getting Milkaaru milk delivered to our home for
-              months now. The freshness is unmatched — it tastes far better than
-              the packet milk we used before. It feels pure, natural, and just
-              like the milk we enjoyed at our village farms. Truly reliable
-              quality every single day.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 self-stretch w-full">
-              <div className="flex items-center gap-4 sm:gap-[21px]">
-                <Avatar className="w-[52px] h-[52px] sm:w-[60px] sm:h-[60px] transition-all duration-300 hover:scale-110 hover:ring-4 hover:ring-[#f8d651] cursor-pointer">
-                  <AvatarImage
-                    src="https://c.animaapp.com/mj71wa7zCf2vzX/img/rectangle-17.png"
-                    alt="Riya Mehta"
-                  />
-                </Avatar>
-
-                <div className="flex flex-col items-start gap-1">
-                  <div className="font-['Montserrat',Helvetica] font-bold text-[#f8d651] text-lg sm:text-xl tracking-[0.32px] leading-6">
-                    Riya Mehta
+        <div className="flex w-full -translate-y-4 animate-fade-in opacity-0 [--animation-delay:600ms]">
+          <Slider
+            dots
+            infinite
+            slidesToShow={1}
+            slidesToScroll={1}
+            autoplay
+            autoplaySpeed={5500}
+            arrows
+            adaptiveHeight
+            className="w-full"
+            responsive={[
+              { breakpoint: 1024, settings: { slidesToShow: 1 } },
+              { breakpoint: 768, settings: { slidesToShow: 1 } },
+            ]}
+          >
+            {reviews.map((review, index) => (
+              <div key={review.name} className="px-1 sm:px-2">
+                <div className="flex flex-col items-start gap-6 sm:gap-8 self-stretch w-full">
+                  <div className="flex items-center gap-1">
+                    {starRatings.map((star, starIndex) => (
+                      <img
+                        key={`star-${index}-${starIndex}`}
+                        className="w-4 h-4 sm:w-[18.67px] sm:h-[17.86px] transition-all duration-300 hover:scale-125 hover:rotate-12 cursor-pointer"
+                        alt="Star"
+                        src={star}
+                      />
+                    ))}
                   </div>
 
-                  <div className="font-['Montserrat',Helvetica] font-medium text-white text-sm sm:text-base tracking-[0.24px] leading-5">
-                    Homemaker &amp; Mother of Two
+                  <p className="self-stretch -mt-px font-['Nunito',Helvetica] font-medium text-white text-base sm:text-lg md:text-xl tracking-[0.32px] leading-7">
+                    {review.quote}
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 self-stretch w-full">
+                    <div className="flex items-center gap-4 sm:gap-[21px]">
+                      <Avatar className="w-[52px] h-[52px] sm:w-[60px] sm:h-[60px] transition-all duration-300 hover:scale-110 hover:ring-4 hover:ring-[#f8d651] cursor-pointer">
+                        <AvatarImage src={review.avatar} alt={review.name} />
+                      </Avatar>
+
+                      <div className="flex flex-col items-start gap-1">
+                        <div className="font-['Montserrat',Helvetica] font-bold text-[#f8d651] text-lg sm:text-xl tracking-[0.32px] leading-6">
+                          {review.name}
+                        </div>
+
+                        <div className="font-['Montserrat',Helvetica] font-medium text-white text-sm sm:text-base tracking-[0.24px] leading-5">
+                          {review.title}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <div className="flex items-center gap-3 sm:gap-4">
-                <button className="w-10 h-10 sm:w-[44px] sm:h-[44px] rounded-md bg-[#f8d651] text-[#043e48] font-bold text-lg transition-transform duration-300 hover:scale-110">
-                  ←
-                </button>
-                <button className="w-10 h-10 sm:w-[44px] sm:h-[44px] rounded-md bg-[#f8d651] text-[#043e48] font-bold text-lg transition-transform duration-300 hover:scale-110">
-                  →
-                </button>
-              </div>
-            </div>
-          </div>
+            ))}
+          </Slider>
         </div>
       </div>
     </section>
