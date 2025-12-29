@@ -8,10 +8,7 @@ import { WhyChooseUsSection } from "./sections/WhyChooseUsSection";
 
 export default function HomePage () {
   return (
-    <main
-      className="bg-[#fff8e8] overflow-hidden w-full min-w-[1440px] flex flex-col"
-      data-model-id="116:24"
-    >
+    <main className="bg-[#fff8e8] w-full flex flex-col" data-model-id="116:24">
       <section className="-translate-y-4 animate-fade-in opacity-0 [--animation-delay:0ms]">
         <HeroSection />
       </section>

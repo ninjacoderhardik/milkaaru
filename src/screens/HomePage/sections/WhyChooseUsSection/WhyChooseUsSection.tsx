@@ -49,8 +49,8 @@ const rightFeatures = [
 
 export default function WhyChooseUsSection  () {
   return (
-    <section className="flex w-full flex-col items-center gap-[60px] px-4 py-12 md:px-8 lg:px-[100px]">
-      <header className="flex flex-col items-center gap-3.5 max-w-[447px] -translate-y-4 animate-fade-in opacity-0">
+    <section className="flex w-full flex-col items-center gap-10 md:gap-14 px-5 sm:px-8 md:px-12 lg:px-[100px] py-12">
+      <header className="flex flex-col items-center gap-3.5 max-w-[520px] -translate-y-4 animate-fade-in opacity-0 text-center px-2">
         <div className="inline-flex items-center gap-1.5">
           <img
             className="w-[16.12px] h-[16.12px]"
@@ -62,30 +62,30 @@ export default function WhyChooseUsSection  () {
           </p>
         </div>
 
-        <h2 className="font-['Montserrat',Helvetica] font-normal text-transparent text-[40px] text-center leading-10">
-          <span className="font-bold text-black tracking-[0.32px] leading-[54px]">
-            Reliable dairy purity <br />
+        <h2 className="font-['Montserrat',Helvetica] font-normal text-transparent text-[28px] sm:text-[32px] md:text-[38px] lg:text-[40px] leading-tight md:leading-[48px]">
+          <span className="font-bold text-black tracking-[0.32px] leading-[1.3]">
+            Reliable dairy purity <br className="hidden sm:block" />
           </span>
-          <span className="font-['Montserrat_Alternates',Helvetica] font-bold text-black tracking-[0.32px] leading-[54px]">
+          <span className="font-['Montserrat_Alternates',Helvetica] font-bold text-black tracking-[0.32px] leading-[1.3]">
             you can trust
           </span>
         </h2>
       </header>
 
-      <div className="flex flex-col lg:flex-row items-center lg:items-end gap-[30px] w-full max-w-[1242px]">
-        <div className="flex flex-col w-full lg:w-[416px] gap-20 -translate-y-4 animate-fade-in opacity-0 [--animation-delay:200ms]">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-10 w-full max-w-[1240px]">
+        <div className="flex flex-col w-full lg:w-1/3 gap-10 md:gap-12 -translate-y-4 animate-fade-in opacity-0 [--animation-delay:200ms]">
           {leftFeatures.map((feature, index) => (
-            <article key={index} className="flex items-center gap-[18px] group cursor-pointer transition-all duration-300 hover:translate-x-4">
+            <article key={index} className="flex items-start gap-4 sm:gap-[18px] group cursor-pointer transition-all duration-300 hover:translate-x-2">
               <img
-                className="w-[50px] h-[50px] shrink-0 transition-all duration-500 group-hover:scale-125 group-hover:rotate-12"
+                className="w-[44px] h-[44px] sm:w-[50px] sm:h-[50px] shrink-0 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
                 alt={feature.alt}
                 src={feature.icon}
               />
-              <div className="flex flex-col gap-2.5 flex-1">
-                <h3 className="font-['Montserrat',Helvetica] font-bold text-black text-lg tracking-[0] leading-5 group-hover:text-[#043e48] transition-colors duration-300">
+              <div className="flex flex-col gap-2 flex-1">
+                <h3 className="font-['Montserrat',Helvetica] font-bold text-black text-base sm:text-lg tracking-[0] leading-5 group-hover:text-[#043e48] transition-colors duration-300">
                   {feature.title}
                 </h3>
-                <p className="font-['Nunito',Helvetica] font-normal text-[#000000b2] text-base tracking-[0] leading-5">
+                <p className="font-['Nunito',Helvetica] font-normal text-[#000000b2] text-sm sm:text-base tracking-[0] leading-5">
                   {feature.description}
                 </p>
               </div>
@@ -93,7 +93,7 @@ export default function WhyChooseUsSection  () {
           ))}
         </div>
 
-        <div className="w-full lg:w-[350px] h-[441px] shrink-0 -translate-y-4 animate-fade-in opacity-0 [--animation-delay:400ms] overflow-hidden rounded-[20px] group cursor-pointer">
+        <div className="w-full lg:w-[34%] max-w-[360px] md:max-w-[420px] h-[360px] sm:h-[420px] lg:h-[460px] shrink-0 -translate-y-4 animate-fade-in opacity-0 [--animation-delay:400ms] overflow-hidden rounded-[20px] group cursor-pointer shadow-2xl shadow-black/20">
           <img
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2"
             alt="Rectangle"
@@ -101,19 +101,19 @@ export default function WhyChooseUsSection  () {
           />
         </div>
 
-        <div className="flex flex-col w-full lg:w-[416px] gap-20 -translate-y-4 animate-fade-in opacity-0 [--animation-delay:600ms]">
+        <div className="flex flex-col w-full lg:w-1/3 gap-10 md:gap-12 -translate-y-4 animate-fade-in opacity-0 [--animation-delay:600ms]">
           {rightFeatures.map((feature, index) => (
-            <article key={index} className="flex items-center gap-[18px] group cursor-pointer transition-all duration-300 hover:translate-x-[-16px]">
+            <article key={index} className="flex items-start gap-4 sm:gap-[18px] group cursor-pointer transition-all duration-300 hover:translate-x-[-6px]">
               <img
-                className="w-[50px] h-[50px] shrink-0"
+                className="w-[44px] h-[44px] sm:w-[50px] sm:h-[50px] shrink-0"
                 alt={feature.alt}
                 src={feature.icon}
               />
-              <div className="flex flex-col gap-2.5 flex-1">
-                <h3 className="font-['Montserrat',Helvetica] font-bold text-black text-lg tracking-[0] leading-5">
+              <div className="flex flex-col gap-2 flex-1">
+                <h3 className="font-['Montserrat',Helvetica] font-bold text-black text-base sm:text-lg tracking-[0] leading-5">
                   {feature.title}
                 </h3>
-                <p className="font-['Nunito',Helvetica] font-normal text-[#000000b2] text-base tracking-[0] leading-5">
+                <p className="font-['Nunito',Helvetica] font-normal text-[#000000b2] text-sm sm:text-base tracking-[0] leading-5">
                   {feature.description}
                 </p>
               </div>
