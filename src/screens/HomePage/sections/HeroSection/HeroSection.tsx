@@ -9,6 +9,7 @@ const navigationItems = [
   { label: "Product", href: "/product" },
   { label: "About Us", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const customerAvatars = [
@@ -63,17 +64,20 @@ export default function HeroSection () {
 
             <div className="flex items-center gap-3 sm:gap-4">
               <Button
+                asChild
                 variant="outline"
                 className="hidden md:inline-flex h-auto items-center justify-center gap-2.5 sm:gap-4 px-3 sm:px-4 py-2.5 rounded-[60px] border border-white bg-transparent text-white hover:bg-white hover:text-[#043e48] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/20 text-sm sm:text-base"
               >
-                <span className="font-['Montserrat_Alternates',Helvetica] font-semibold text-base sm:text-lg tracking-[0] leading-[normal] whitespace-nowrap">
-                  Contact us
-                </span>
-                <img
-                  className="w-5 h-5 sm:w-[30px] sm:h-[30px]"
-                  alt="Arrow icon"
-                  src="https://c.animaapp.com/mj71wa7zCf2vzX/img/frame-11.svg"
-                />
+                <a href="/contact">
+                  <span className="font-['Montserrat_Alternates',Helvetica] font-semibold text-base sm:text-lg tracking-[0] leading-[normal] whitespace-nowrap">
+                    Contact us
+                  </span>
+                  <img
+                    className="w-5 h-5 sm:w-[30px] sm:h-[30px]"
+                    alt="Arrow icon"
+                    src="https://c.animaapp.com/mj71wa7zCf2vzX/img/frame-11.svg"
+                  />
+                </a>
               </Button>
 
               <button
@@ -102,11 +106,12 @@ export default function HeroSection () {
                   </a>
                 ))}
                 <Button
+                  asChild
                   variant="outline"
                   className="h-auto w-full flex items-center justify-center gap-3 px-3 py-2.5 rounded-[12px] border border-white bg-transparent text-white hover:bg-white hover:text-[#043e48] transition-all duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Contact us
+                  <a href="/contact">Contact us</a>
                 </Button>
               </div>
             )}
