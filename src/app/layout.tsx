@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     siteName: "Milkaaru",
     images: [
       {
-        url: `${siteUrl}/og-image.jpg`,
+        url: `${siteUrl}/Milkaaaru.svg`,
         width: 1200,
         height: 630,
-        alt: "Milkaaru dairy products",
+        alt: "Milkaaru dairy products brand mark",
       },
     ],
   },
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: "Milkaaru | Farm-Fresh Milk & Ghee",
     description:
       "Pure, chemical-free milk and ghee delivered daily from pasture-raised cows.",
-    images: [`${siteUrl}/og-image.jpg`],
+    images: [`${siteUrl}/Milkaaaru.svg`],
   },
   alternates: {
     canonical: siteUrl,
