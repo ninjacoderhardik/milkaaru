@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { siteUrl } from "../lib/seo";
+import { LayoutShell } from "../components/LayoutShell";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -57,6 +58,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
   },
+  icons: {
+    icon: "/Milkaaaru.svg",
+  },
 };
 
 export default function RootLayout({
@@ -67,9 +71,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[#fff8e8] text-neutral-900`}
       >
-        {children}
+        <LayoutShell>{children}</LayoutShell>
       </body>
     </html>
   );

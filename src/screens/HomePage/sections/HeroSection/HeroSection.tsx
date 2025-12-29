@@ -5,10 +5,10 @@ import { Badge } from "../../../../components/ui/badge";
 import { Button } from "../../../../components/ui/button";
 
 const navigationItems = [
-  { label: "Home", href: "#" },
-  { label: "Product", href: "#" },
-  { label: "About Us", href: "#" },
-  { label: "Services", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "Product", href: "/product" },
+  { label: "About Us", href: "/about" },
+  { label: "Services", href: "/services" },
 ];
 
 const customerAvatars = [

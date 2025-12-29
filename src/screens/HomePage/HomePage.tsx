@@ -1,6 +1,5 @@
 import { AboutUsSection } from "./sections/AboutUsSection";
 import { FaqSection } from "./sections/FaqSection";
-import { FooterSection } from "./sections/FooterSection";
 import { HeroSection } from "./sections/HeroSection";
 import { ServicesSection } from "./sections/ServicesSection";
 import { TestimonialsSection } from "./sections/TestimonialsSection";
@@ -27,9 +26,6 @@ export default function HomePage () {
       <section className="-translate-y-4 animate-fade-in opacity-0 [--animation-delay:1000ms]">
         <FaqSection />
       </section>
-      <footer className="-translate-y-4 animate-fade-in opacity-0 [--animation-delay:1200ms]">
-        <FooterSection />
-      </footer>
     </main>
   );
 };
