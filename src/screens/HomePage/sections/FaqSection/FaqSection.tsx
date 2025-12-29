@@ -21,9 +21,9 @@ const faqItems = [
 
 export default function FaqSection () {
   return (
-    <section className="flex flex-col items-start gap-10 md:gap-[60px] w-full max-w-[1440px] mx-auto px-5 sm:px-8 md:px-12 lg:px-[98px] py-12 md:py-[80px]">
-      <header className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8 w-full -translate-y-4 animate-fade-in opacity-0 [--animation-delay:200ms]">
-        <div className="flex flex-col items-start gap-4 md:gap-5 flex-1 max-w-[753px]">
+    <section className="flex flex-col items-start gap-[60px] w-full max-w-[1440px] mx-auto px-[98px] py-[80px]">
+      <header className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 w-full -translate-y-4 animate-fade-in opacity-0 [--animation-delay:200ms]">
+        <div className="flex flex-col items-start gap-5 flex-1 max-w-[753px]">
           <div className="inline-flex items-center gap-1.5">
             <img
               className="w-[16.12px] h-[16.12px]"
@@ -34,11 +34,11 @@ export default function FaqSection () {
               FAQS
             </span>
           </div>
-          <h2 className="font-['Montserrat',Helvetica] font-bold text-black text-[32px] md:text-[40px] tracking-[0.80px] leading-[40px] md:leading-[54px]">
+          <h2 className="font-['Montserrat',Helvetica] font-bold text-black text-[40px] tracking-[0.80px] leading-[54px]">
             Frequently asked questions about our Milkaaru dairy service
           </h2>
         </div>
-          <Button className="w-full sm:w-auto flex items-center justify-center gap-3 px-5 py-3 bg-[#f8d651] hover:bg-[#f8d651]/90 rounded-[10px] h-auto transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#f8d651]/50 group">
+          <Button className="flex items-center justify-center gap-3 px-5 py-3 bg-[#f8d651] hover:bg-[#f8d651]/90 rounded-[10px] h-auto transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#f8d651]/50 group">
           <span className="font-['Montserrat',Helvetica] font-semibold text-black text-base tracking-[0] leading-5 whitespace-nowrap">
             View All FAQS
           </span>
@@ -50,16 +50,16 @@ export default function FaqSection () {
         </Button>
       </header>
 
-      <div className="flex flex-col lg:flex-row items-stretch gap-8 md:gap-[50px] lg:gap-[73px] w-full -translate-y-4 animate-fade-in opacity-0 [--animation-delay:400ms]">
+      <div className="flex flex-col lg:flex-row items-stretch gap-[73px] w-full -translate-y-4 animate-fade-in opacity-0 [--animation-delay:400ms]">
         <div className="flex flex-col items-start gap-0 flex-1 w-full">
           {faqItems.map((item, index) => (
             <div
               key={index}
-              className={`flex items-center justify-between px-0 py-6 md:py-8 lg:py-10 w-full flex-wrap gap-3 ${
+              className={`flex items-center justify-between px-0 py-10 w-full ${
                 index < faqItems.length - 1 ? "border-b border-[#00000033]" : ""
               } cursor-pointer group transition-all duration-300 hover:bg-gray-50/50 hover:px-4 hover:rounded-lg`}
             >
-              <h3 className="font-['Nunito',Helvetica] font-bold text-black text-lg md:text-xl tracking-[0] leading-6 flex-1 group-hover:text-[#043e48] transition-colors duration-300">
+              <h3 className="font-['Nunito',Helvetica] font-bold text-black text-xl tracking-[0] leading-5 flex-1 group-hover:text-[#043e48] transition-colors duration-300">
                 {item.question}
               </h3>
               <ChevronDownIcon className="w-6 h-6 shrink-0 ml-4 transition-all duration-300 group-hover:translate-y-1 group-hover:text-[#043e48] group-hover:scale-125" />
@@ -67,7 +67,7 @@ export default function FaqSection () {
           ))}
         </div>
 
-        <div className="w-full lg:w-[493px] h-[260px] sm:h-[340px] md:h-[420px] lg:h-[666px] rounded-[26px] overflow-hidden group cursor-pointer">
+        <div className="w-full lg:w-[493px] h-auto lg:h-[666px] rounded-[26px] overflow-hidden group cursor-pointer">
           <img
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             alt="Dairy farm with cows"
