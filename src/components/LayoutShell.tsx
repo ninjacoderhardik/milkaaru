@@ -1,7 +1,6 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { FooterHome } from "./FooterHome";
 import { NavbarHome } from "./NavbarHome";
 
 type Props = {
@@ -16,7 +15,7 @@ export function LayoutShell({ children }: Props) {
     <div className="flex min-h-screen flex-col">
       {showNavbar && <NavbarHome />}
       <main className="flex-1">{children}</main>
-      <FooterHome />
+      {/* <FooterHome /> */}
     </div>
   );
 }

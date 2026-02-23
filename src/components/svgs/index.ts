@@ -1,0 +1,9 @@
+export { Svg1 } from "./Svg1";
+export { Svg2 } from "./Svg2";
+export { Svg3 } from "./Svg3";
+export { Svg4 } from "./Svg4";
+export { Svg5 } from "./Svg5";
+export { Svg6 } from "./Svg6";
+export { Svg7 } from "./Svg7";
+export { Svg8 } from "./Svg8";
+export { Svg9 } from "./Svg9";
