@@ -1,12 +1,18 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
 import { Logo } from "../../components/Logo";
 import { Button } from "../../components/ui/button";
 import { ProductCard } from "../../components/ProductCard";
 import { GheeBottle } from "../../components/GheeBottle";
 import { MilkBottle } from "../../components/MilkBottle";
+import { RightModal } from "../../components/RightModal";
+import { Frame498 } from "../../components/Frame498";
 import { Svg1, Svg2, Svg3, Svg4 } from "../../components/svgs";
 
 export default function HomePage () {
+  const [loginOpen, setLoginOpen] = useState(false);
+
   return (
     <main className="relative w-full min-h-screen bg-[#fff8e8] overflow-hidden">
       <section className="relative z-10 mx-auto flex w-full flex-col gap-10 px-6 pb-14 pt-8 sm:px-10 md:pt-10 lg:px-16 lg:pt-12">
@@ -21,14 +27,14 @@ export default function HomePage () {
             <Link href="/contact" className="hover:text-[#f2a33b]">Contact Us</Link>
           </div>
           <Button
-            asChild
             variant="outline"
             className="h-auto rounded-full border-2 border-[#f2a33b] bg-white px-5 py-2 text-sm font-semibold text-[#3e2a1c] shadow-sm transition hover:bg-[#fff2e2] hover:shadow"
+            onClick={() => setLoginOpen(true)}
           >
-            <Link href="/login" className="inline-flex items-center gap-2">
+            <span className="inline-flex items-center gap-2">
               <span>Log In</span>
               <span aria-hidden>→</span>
-            </Link>
+            </span>
           </Button>
         </div>
 
@@ -59,6 +65,29 @@ export default function HomePage () {
           </div>
         </div>
       </section>
+
+      <RightModal open={loginOpen} onClose={() => setLoginOpen(false)} widthClassName="w-1/2 max-w-[720px]">
+        <div className="flex h-full flex-col">
+          <div className="relative">
+            <Frame498 className="w-full" priority />
+          </div>
+          <div className="flex-1 space-y-4 px-6 py-6 sm:px-8 sm:py-8 overflow-auto">
+            <h3 className="text-xl font-bold text-neutral-900">Start Your Fresh Milk Journey</h3>
+            <div className="space-y-3">
+              <label className="text-sm font-medium text-neutral-800">Phone Number</label>
+              <input
+                type="tel"
+                placeholder="Enter your registered mobile number"
+                className="w-full rounded-lg border border-neutral-200 px-4 py-3 text-sm focus:border-[#f2a33b] focus:outline-none"
+              />
+            </div>
+            <Button className="w-full rounded-full bg-[#f2a33b] text-neutral-900 hover:bg-[#e59221]">Send OTP</Button>
+            <p className="text-xs text-neutral-600">
+              By continuing, you agree to Milkaaru's <a className="underline" href="#">Terms</a> & <a className="underline" href="#">Privacy Policy</a>.
+            </p>
+          </div>
+        </div>
+      </RightModal>
 
       {/* Background SVG layer */}
       <div className="pointer-events-none absolute inset-0">
