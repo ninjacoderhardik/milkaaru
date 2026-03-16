@@ -1,8 +1,19 @@
-export const metadata = {
-  title: "About Milkaaru",
+import { generateSEOMetadata } from "../../components/SEO";
+import { siteUrl } from "../../lib/seo";
+
+export const metadata = generateSEOMetadata({
+  title: "About Milkaaru - Farm-Fresh Gir Cow Dairy in Surat, Gujarat",
   description:
-    "Learn how Milkaaru brings farm-fresh, chemical-free dairy from well-cared-for cows to your home.",
-};
+    "Learn how Milkaaru brings farm-fresh, chemical-free Gir cow A2 milk and dairy products from trusted farmers in Surat, Gujarat to your home. Sustainable, ethical farming practices.",
+  keywords: [
+    "about Milkaaru",
+    "Gir cow dairy farm Surat",
+    "ethical dairy farming Gujarat",
+    "sustainable milk production",
+    "farm-fresh dairy Surat",
+  ],
+  canonical: `${siteUrl}/about`,
+});
 
 export default function AboutPage() {
   return (

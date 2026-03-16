@@ -12,49 +12,76 @@ const nunito = Nunito({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Milkaaru | Farm-Fresh Milk & Ghee",
+    default: "Milkaaru Surat | Gir Cow A2 Milk, Bilona Ghee & Dairy Delivery in Gujarat",
     template: "%s | Milkaaru",
   },
   description:
-    "Milkaaru delivers pure, farm-fresh milk and ghee straight from well-cared-for cows — fresh, chemical-free, and delivered daily.",
+    "Milkaaru delivers farm-fresh Gir cow A2 milk, traditional bilona ghee, paneer, and curd in Surat, Gujarat. Pure, chemical-free dairy products from trusted farmers delivered fresh to your doorstep daily.",
   keywords: [
+    "Gir cow milk Surat",
+    "A2 milk delivery Gujarat",
+    "farm fresh milk Surat",
+    "A2 ghee Surat",
+    "bilona ghee Gujarat",
+    "dairy farm Surat",
+    "organic milk Surat",
+    "A2 paneer Surat",
+    "A2 curd Gujarat",
     "Milkaaru",
-    "fresh milk",
-    "farm fresh milk",
-    "ghee",
-    "dairy delivery",
-    "A2 milk",
-    "natural dairy products",
+    "Gir cow dairy Surat",
+    "fresh milk home delivery Surat",
+    "chemical-free milk Gujarat",
+    "traditional ghee Surat",
+    "farm to home dairy Surat",
   ],
   authors: [{ name: "Milkaaru" }],
+  creator: "Milkaaru",
+  publisher: "Milkaaru",
   openGraph: {
     type: "website",
+    locale: "en_IN",
     url: siteUrl,
-    title: "Milkaaru | Farm-Fresh Milk & Ghee",
+    title: "Milkaaru Surat | Gir Cow A2 Milk & Bilona Ghee Delivery in Gujarat",
     description:
-      "Pure, chemical-free milk and ghee delivered daily from pasture-raised cows.",
+      "Farm-fresh Gir cow A2 milk, bilona ghee, paneer & curd delivered daily in Surat, Gujarat. Pure, chemical-free dairy from trusted farmers.",
     siteName: "Milkaaru",
     images: [
       {
-        url: `${siteUrl}/Milkaaaru.svg`,
+        url: `${siteUrl}/milkaaru1.svg`,
         width: 1200,
         height: 630,
-        alt: "Milkaaru dairy products brand mark",
+        alt: "Milkaaru - Farm Fresh Gir Cow Dairy Products in Surat, Gujarat",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Milkaaru | Farm-Fresh Milk & Ghee",
+    title: "Milkaaru Surat | Gir Cow A2 Milk & Bilona Ghee Delivery",
     description:
-      "Pure, chemical-free milk and ghee delivered daily from pasture-raised cows.",
-    images: [`${siteUrl}/Milkaaaru.svg`],
+      "Farm-fresh Gir cow A2 milk, bilona ghee, paneer & curd delivered daily in Surat, Gujarat.",
+    images: [`${siteUrl}/milkaaru1.svg`],
+    creator: "@milkaaru_dairy_farm",
   },
   alternates: {
     canonical: siteUrl,
   },
   icons: {
-    icon: "/Milkaaaru.svg",
+    icon: "/milkaaru1.svg",
+    apple: "/milkaaru1.svg",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "ADD_YOUR_GOOGLE_VERIFICATION_CODE",
   },
 };
 
@@ -71,6 +98,93 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Milkaaru",
+              "description": "Farm-fresh Gir cow A2 milk and traditional dairy products delivered daily in Surat, Gujarat",
+              "url": siteUrl,
+              "logo": `${siteUrl}/milkaaru1.svg`,
+              "image": `${siteUrl}/milkaaru1.svg`,
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Surat",
+                "addressRegion": "Gujarat",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "21.1702",
+                "longitude": "72.8311"
+              },
+              "sameAs": [
+                "https://www.instagram.com/milkaaru_dairy_farm"
+              ],
+              "priceRange": "₹₹",
+              "servesCuisine": "Dairy Products",
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Dairy Products",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Product",
+                      "name": "Gir Cow A2 Milk",
+                      "description": "Farm-fresh Gir cow A2 milk delivered daily"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Product",
+                      "name": "Bilona Ghee",
+                      "description": "Traditional bilona ghee made from A2 milk"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Product",
+                      "name": "A2 Paneer",
+                      "description": "Fresh paneer made from Gir cow A2 milk"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Product",
+                      "name": "A2 Curd",
+                      "description": "Fresh curd made from Gir cow A2 milk"
+                    }
+                  }
+                ]
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Milkaaru",
+              "url": siteUrl,
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": `${siteUrl}/search?q={search_term_string}`
+                },
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
         />
       </head>
       <body
