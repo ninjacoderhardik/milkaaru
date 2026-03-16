@@ -5,6 +5,7 @@ import { GheeBottle } from "../../components/GheeBottle";
 import { MilkBottle } from "../../components/MilkBottle";
 import { Navbar } from "../../components/common/navbar";
 import Image from "next/image";
+import Head from "next/head";
 import { Footer } from "../../components/Footer";
 
 export default function HomePage() {
@@ -85,18 +86,68 @@ export default function HomePage() {
     },
   ];
 
+  const seoTitle =
+    "Milkaaru Surat | Gir Cow Milk, A2 Ghee, Paneer & Curd Delivery in Gujarat";
+  const seoDescription =
+    "Milkaaru delivers farm-fresh Gir cow A2 milk, bilona ghee, paneer, and curd in Surat, Gujarat—sourced from trusted farmers and delivered fresh to your doorstep.";
+  const seoKeywords =
+    "Gir cow milk Surat, A2 milk delivery Gujarat, farm fresh milk Surat, A2 ghee Surat, bilona ghee Gujarat, dairy farm Surat, organic milk Surat, A2 paneer, A2 curd, Milkaaru";
+
   return (
     // <main className="w-full bg-[#fff8e8] overflow-hidden">
     <main className="w-full overflow-hidden bg-white">
+      <Head>
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDescription} />
+        <meta name="keywords" content={seoKeywords} />
+        <link rel="canonical" href="https://www.milkaaru.in/" />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDescription} />
+        <meta
+          property="og:image"
+          content="https://www.milkaaru.in/milkaaru1.svg"
+        />
+        <meta property="og:url" content="https://www.milkaaru.in/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={seoDescription} />
+        <meta
+          name="twitter:image"
+          content="https://www.milkaaru.in/milkaaru1.svg"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Milkaaru",
+              description:
+                "Milkaaru delivers farm-fresh Gir cow milk and traditional A2 dairy products across India.",
+              url: "https://www.milkaaru.in/",
+              image: ["https://www.milkaaru.in/milkaaru1.svg"],
+              // telephone: '+91-99999-99999',
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "IN",
+              },
+              sameAs: [
+                // 'https://www.facebook.com/',
+                "https://www.instagram.com/milkaaru_dairy_farm",
+              ],
+            }),
+          }}
+        />
+      </Head>
       <section
         className="flex bg-[url('/11.svg')]
-                    md:bg-[url('/11.svg')]
-                    lg:bg-[url('/1.svg')]
-                    bg-cover bg-center bg-no-repeat
-                    h-full min-h-[800px] md:min-h-screen max-h-[900px] z-10 mx-auto w-full flex-col gap-10 px-6 pb-14 pt-8 sm:px-10 md:pt-10 lg:px-16 lg:pt-12"
+                   md:bg-[url('/11.svg')]
+                   lg:bg-[url('/1.svg')]
+                   bg-cover bg-center bg-no-repeat
+                   h-full min-h-[800px] md:min-h-screen max-h-[900px] z-10 mx-auto w-full flex-col gap-10 px-6 pb-14 pt-8 sm:px-10 md:pt-10 lg:px-16 lg:pt-12"
       >
         <Navbar />
-
         <div className="flex min-h-[45vh] md:min-h-[70vh] w-full items-center justify-center md:justify-start lg:justify-start max-w-[1560px] mx-auto">
           <div className="md:max-w-2xl lg:max-w-3xl flex flex-col gap-5 items-center text-center md:items-start md:text-left lg:items-start lg:text-left">
             <span className="inline-flex items-center w-fit rounded-full bg-[#f3b457] px-5 py-2.5 text-xs md:text-sm font-medium md:font-semibold text-[#3e2a1c] shadow-sm">
@@ -335,7 +386,6 @@ export default function HomePage() {
                       height={32}
                       className={`h-8 w-8 ${isFilled ? "" : "opacity-60"}`}
                     />
-
                     <div className="flex flex-col gap-2 items-center md:items-start h-full">
                       <h2 className="text-[20px] font-semibold text-[#1f140c] text-center md:text-left">
                         {service.title}
@@ -531,42 +581,42 @@ export default function HomePage() {
       <section className="w-full flex flex-col mt-32 gap-6 mx-auto max-w-[1560px]">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 w-full mx-auto">
           <Image
-            src="/rectangle28.svg"
+            src="/Rectangle28.svg"
             width={800}
             height={500}
             alt="Man pouring milk into bottles"
             className="lg:col-span-2  object-cover rounded-xl"
           />
           <Image
-            src="/rectangle29.svg"
+            src="/Rectangle29.svg"
             width={850}
             height={500}
             alt="Two cows close-up"
             className="object-cover rounded-xl"
           />
           <Image
-            src="/rectangle30.svg"
+            src="/Rectangle30.svg"
             width={850}
             height={500}
             alt="Man with milk pot"
             className="object-cover rounded-xl"
           />
           <Image
-            src="/rectangle32.svg"
+            src="/Rectangle32.svg"
             width={850}
             height={500}
             alt="Cows eating fodder"
             className="object-cover rounded-xl"
           />
           <Image
-            src="/rectangle31.svg"
+            src="/Rectangle31.svg"
             width={800}
             height={500}
             alt="Man milking cow"
             className="lg:col-span-2 object-cover rounded-xl"
           />
           <Image
-            src="/rectangle33.svg"
+            src="/Rectangle33.svg"
             width={850}
             height={500}
             alt="Man petting cow"

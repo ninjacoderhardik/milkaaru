@@ -11,7 +11,7 @@ export type LogoProps = {
 export function Logo({ className, width = 140, height = 60, priority }: LogoProps) {
   return (
     <Image
-      src="/Milkaaru 1.svg"
+      src="/milkaaru1.svg"
       alt="Milkaaru logo"
       width={width}
       height={height}
