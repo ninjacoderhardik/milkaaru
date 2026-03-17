@@ -1,3 +1,12 @@
+export const metadata = {
+  title: "Return & Refund Policy | Milkaaru Dairy Surat",
+  description:
+    "Milkaaru's return and refund policy for A2 milk and dairy products in Surat, Gujarat. Quality guarantee and customer satisfaction.",
+  alternates: {
+    canonical: "https://milkaaru.in/return-refund-policy",
+  },
+};
+
 export default function ReturnRefundPolicyPage() {
   return (
     <main className="min-h-screen bg-[#fff8e8] text-[#0b2e33] px-5 sm:px-8 md:px-12 lg:px-20 py-16">

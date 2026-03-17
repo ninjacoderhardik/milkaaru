@@ -1,3 +1,12 @@
+export const metadata = {
+  title: "Delivery Policy | Milkaaru Fresh Milk Delivery in Surat",
+  description:
+    "Learn about Milkaaru's delivery policy for A2 milk and dairy products in Surat, Gujarat. Delivery schedules, areas, and handling information.",
+  alternates: {
+    canonical: "https://milkaaru.in/delivery-policy",
+  },
+};
+
 export default function DeliveryPolicyPage() {
   return (
     <main className="min-h-screen bg-[#fff8e8] text-[#0b2e33] px-5 sm:px-8 md:px-12 lg:px-20 py-16">

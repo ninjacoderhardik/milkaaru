@@ -1,3 +1,12 @@
+export const metadata = {
+  title: "Privacy Policy | Milkaaru Milk Delivery Surat",
+  description:
+    "Read Milkaaru's privacy policy for A2 milk delivery in Surat, Gujarat. Learn how we protect your data and personal information.",
+  alternates: {
+    canonical: "https://milkaaru.in/privacy-policy",
+  },
+};
+
 export default function PrivacyPolicyPage() {
   return (
     <main className="min-h-screen bg-[#fff8e8] text-[#0b2e33] px-5 sm:px-8 md:px-12 lg:px-20 py-16">

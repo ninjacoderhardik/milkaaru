@@ -1,20 +1,10 @@
-import { generateSEOMetadata } from "../../components/SEO";
-import { siteUrl } from "../../lib/seo";
-
-export const metadata = generateSEOMetadata({
-  title: "Gir Cow Dairy Products - A2 Milk, Ghee, Paneer & Curd in Surat",
-  description: "Explore Milkaaru's range of farm-fresh Gir cow dairy products in Surat, Gujarat. A2 milk, traditional bilona ghee, fresh paneer, and curd - pure, chemical-free, and delivered daily.",
-  keywords: [
-    "Gir cow products Surat",
-    "A2 milk Surat",
-    "bilona ghee Gujarat",
-    "fresh paneer Surat",
-    "A2 curd Gujarat",
-    "dairy products Surat",
-    "organic dairy Gujarat",
-  ],
-  canonical: `${siteUrl}/product`,
-});
+export const metadata = {
+  title: "A2 Milk, Bilona Ghee, Paneer & Dairy Products in Surat | Milkaaru",
+  description: "Explore Milkaaru's farm-fresh Gir cow dairy products in Surat, Gujarat, India. A2 milk, bilona ghee, paneer & curd - pure, chemical-free, delivered daily.",
+  alternates: {
+    canonical: "https://milkaaru.in/product",
+  },
+};
 
 export default function ProductPage() {
   return (
