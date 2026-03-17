@@ -29,9 +29,9 @@ export function Footer() {
     <footer className="bg-[url('/Frame276.svg')]                   
                     md:bg-[url('/Frame276.svg')]
                     bg-cover bg-center bg-no-repeat
-                    relative z-0 w-full h-fit min-h-[694px] mt-10">
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-12 px-6 md:px-10 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start mt-18">
+                    relative z-0 w-full h-fit min-h-0 mt-10">
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-10 px-6 md:px-10 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           {/* Left Section - Logo and Subscription */}
           <div className="space-y-6 w-full max-w-[520px]">
             <div className="max-w-[420px]">

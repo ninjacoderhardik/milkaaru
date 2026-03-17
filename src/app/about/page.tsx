@@ -1,7 +1,7 @@
 export const metadata = {
   title: "About Milkaaru - Farm-Fresh A2 Milk Delivery in Surat, Gujarat",
   description:
-    "Learn how Milkaaru brings farm-fresh, chemical-free Gir cow A2 milk and dairy products from trusted farmers in Surat, Gujarat, India to your home daily.",
+    "Milkaaru delivers farm-fresh, chemical-free Gir cow A2 milk and dairy products from trusted farmers in Surat, Gujarat, India to your home daily.",
   alternates: {
     canonical: "https://milkaaru.in/about",
   },
