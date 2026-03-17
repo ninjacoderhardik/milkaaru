@@ -1,18 +1,10 @@
-import { generateSEOMetadata } from "../../components/SEO";
-import { siteUrl } from "../../lib/seo";
-
-export const metadata = generateSEOMetadata({
-  title: "Contact Milkaaru - Gir Cow Dairy Support in Surat, Gujarat",
-  description: "Contact Milkaaru for farm-fresh Gir cow A2 milk delivery, orders, subscriptions, partnerships, and inquiries in Surat, Gujarat. We're here to help with all your dairy needs.",
-  keywords: [
-    "contact Milkaaru",
-    "milk delivery support Surat",
-    "dairy farm contact Surat",
-    "A2 milk order Surat",
-    "Milkaaru customer service",
-  ],
-  canonical: `${siteUrl}/contact`,
-});
+export const metadata = {
+  title: "Contact Milkaaru - A2 Milk Delivery Support in Surat, Gujarat",
+  description: "Contact Milkaaru for farm-fresh Gir cow A2 milk delivery, orders, subscriptions, and inquiries in Surat, Gujarat, India. We're here to help!",
+  alternates: {
+    canonical: "https://milkaaru.in/contact",
+  },
+};
 
 export default function ContactPage() {
   return (
@@ -65,7 +57,7 @@ export default function ContactPage() {
                 className="flex items-center gap-2 text-[#043e48] hover:text-[#f8d651] transition"
                 href="mailto:partners@milkaaru.world"
               >
-                <span>🤝</span> partners@milkaaru.world
+                {/* <span>🤝</span> partners@milkaaru.world */}
               </a>
               <p className="flex items-start gap-2">
                 <span>📍</span>

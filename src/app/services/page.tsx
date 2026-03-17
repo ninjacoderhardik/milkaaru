@@ -1,7 +1,10 @@
 export const metadata = {
-  title: "Our Services",
+  title: "Dairy Delivery Services in Surat | Fresh A2 Milk Subscription - Milkaaru",
   description:
-    "See how Milkaaru delivers fresh dairy daily, with flexible subscriptions and attentive customer care.",
+    "Milkaaru delivers fresh A2 milk and dairy products daily in Surat, Gujarat, India. Flexible subscriptions, quality guarantee, and doorstep delivery.",
+  alternates: {
+    canonical: "https://milkaaru.in/services",
+  },
 };
 
 export default function ServicesPage() {

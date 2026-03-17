@@ -1,1 +1,1 @@
-export const siteUrl = "https://www.milkaaru.in";
+export const siteUrl = "https://milkaaru.in";

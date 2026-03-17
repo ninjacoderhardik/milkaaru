@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Terms & Conditions | Milkaaru Milk Delivery Surat",
+  description:
+    "Read Milkaaru's terms and conditions for A2 milk delivery, subscriptions, billing, and policies in Surat, Gujarat.",
+};
+
 export default function TermsOfServicePage() {
   return (
     <main className="min-h-screen bg-[#fff8e8] text-[#0b2e33] px-5 sm:px-8 md:px-12 lg:px-20 py-16">
